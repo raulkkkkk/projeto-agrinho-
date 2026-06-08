@@ -1,0 +1,373 @@
+/* Variáveis de Paleta de Cores (Tema Claro Padrão) */
+:root {
+    --bg-primary: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-main: #2b2d42;
+    --text-muted: #6c757d;
+    --accent-green: #2a9d8f;
+    --accent-dark-green: #1d6f66;
+    --border-color: #e9ecef;
+    --font-size-base: 16px;
+}
+
+/* Variáveis para o Tema Escuro */
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #f8f9fa;
+    --text-muted: #a0a0a0;
+    --accent-green: #48cae4;
+    --accent-dark-green: #0096c7;
+    --border-color: #333333;
+}
+
+/* Reset Geral e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tipografia e Botões */
+h1, h2, h3, h4 {
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.btn-primary {
+    background-color: var(--accent-green);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dark-green);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent-green);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-green);
+    color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent-green);
+}
+
+nav button {
+    margin-left: 10px;
+}
+
+/* Seção Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.1), rgba(0, 0, 0, 0));
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-muted);
+}
+
+/* Seções de Informações e Grid */
+.info-section {
+    padding: 60px 0;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.data-box {
+    background-color: var(--bg-card);
+    border-left: 5px solid var(--accent-green);
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 0 8px 8px 0;
+}
+
+.data-box ul {
+    list-style-type: none;
+}
+
+.data-box li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.data-box li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+/* Calculadora */
+.calculator-section {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin: 40px 0;
+}
+
+.calc-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.calc-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    width: 150px;
+}
+
+.calc-result {
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.result-card {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.result-card.bio {
+    background-color: rgba(42, 157, 143, 0.1);
+    border-color: var(--accent-green);
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* Modal de Acessibilidade */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.control-group {
+    margin: 20px 0;
+}
+
+.control-group p {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.audio-instruction {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+/* Animações ao Scroll */
+.scroll-anim {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-anim.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-reveal {
+    animation: fadeUp 1s ease-forward;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Estilização da caixa de Custo-Benefício (ROI) */
+.roi-box {
+    background-color: var(--bg-primary);
+    border: 1px dashed var(--accent-green);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.roi-box h3 {
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.roi-stats {
+    margin-top: 15px;
+    background-color: var(--bg-card);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.roi-stats p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.highlight {
+    font-weight: 700;
+    color: #2a9d8f;
+    font-size: 1.1rem;
+}
+
+[data-theme="dark"] .highlight {
+    color: #48cae4;
+}

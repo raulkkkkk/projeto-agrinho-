@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivo Sustentável | O Futuro da Agricultura</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Cultivo<span>Sustentável</span></div>
+            <nav>
+                <button id="theme-toggle" class="btn-secondary" aria-label="Alternar tema claro/escuro">Ajustar Tema</button>
+                <button id="access-modal-btn" class="btn-primary" aria-label="Opções de Acessibilidade">Acessibilidade</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero text-reveal">
+        <h1>Agricultura Inteligente para um Planeta Saudável</h1>
+        <p>Descubra como a tecnologia e as práticas ecológicas aumentam a produtividade reduzindo o impacto ambiental.</p>
+    </section>
+
+    <main class="container">
+        
+        <section class="info-section scroll-anim">
+            <h2>Práticas Essenciais da Agricultura Sustentável</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Rotação de Culturas</h3>
+                    <p>Alternar espécies de plantas na mesma área melhora a saúde do solo, repõe nutrientes naturalmente e quebra o ciclo de pragas sem o uso excessivo de químicos.</p>
+                </div>
+                <div class="card">
+                    <h3>Plantio Direto</h3>
+                    <p>Cultivar sobre os resíduos da colheita anterior protege o solo contra erosão, mantém a umidade da terra e reduz drasticamente as emissões de carbono dos tratores.</p>
+                </div>
+                <div class="card">
+                    <h3>Gestão de Água</h3>
+                    <p>O uso de irrigação por gotejamento aliado a sensores de umidade evita o desperdício, direcionando a água exatamente para a raiz da planta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section scroll-anim">
+            <h2>A Biotecnologia como Aliada da Natureza</h2>
+            <p>Ao contrário do senso comum, as sementes geneticamente modificadas (OGMs) são pilares da sustentabilidade moderna, fundamentadas em dados de instituições como a <strong>ISAAA</strong> e a <strong>PG Economics</strong>:</p>
+            
+            <div class="data-box">
+                <ul>
+                    <li><strong>Redução de Pesticidas:</strong> O uso de culturas geneticamente modificadas reduziu a aplicação de defensivos agrícolas em <strong>8,3%</strong> globalmente, evitando o descarte de milhões de litros de químicos no ecossistema.</li>
+                    <li><strong>Menos Emissão de CO₂:</strong> Ao exigir menos passagens de tratores para pulverização, a biotecnologia agrícola ajudou a reduzir as emissões de gases estufa em volumes equivalentes a retirar <strong>15,3 milhões de carros</strong> das ruas por um ano.</li>
+                    <li><strong>Preservação de Áreas Verdes:</strong> Como produzem mais por hectare, os OGMs impediram que milhões de hectares de florestas e savanas fossem desmatados para virar pasto ou lavoura.</li>
+                </ul>
+            </div>
+        </section>
+
+      <!-- Calculadora de Sementes e Explicação de Custo-Benefício -->
+        <section class="calculator-section scroll-anim">
+            <h2>Simulador de Impacto Econômico e Sustentável</h2>
+            <p>Insira a quantidade de sacas necessárias para o seu plantio e compare os custos de mercado, além de entender por que o investimento inicial se paga.</p>
+            
+            <div class="calc-form">
+                <label for="sacas-input">Quantidade de sacas de sementes:</label>
+                <input type="number" id="sacas-input" min="1" placeholder="Ex: 50">
+                <button id="calc-btn" class="btn-primary">Calcular Impacto</button>
+            </div>
+
+            <div id="calc-result" class="calc-result hidden">
+                <div class="result-grid">
+                    <div class="result-card normal">
+                        <h4>Semente Convencional</h4>
+                        <p class="price" id="preco-normal">R$ 0,00</p>
+                        <p class="desc"><strong>Custo Oculto Alto:</strong> Embora a semente seja mais barata, o agricultor gasta até 3x mais com aplicações extras de pesticidas, diesel para o trator e perde parte da safra para lagartas e pragas.</p>
+                    </div>
+                    <div class="result-card bio">
+                        <h4>Semente Modificada (Sustentável)</h4>
+                        <p class="price" id="preco-sustentavel">R$ 0,00</p>
+                        <p class="desc"><strong>Investimento Inteligente:</strong> A semente já nasce protegida contra as principais pragas e tolera melhor o clima. Reduz drasticamente o gasto com defensivos químicos e maquinário.</p>
+                    </div>
+                </div>
+
+                <!-- Nova seção explicando por que vale a pena pagar mais caro -->
+                <div class="roi-box">
+                    <h3>Por que o valor maior da semente modificada vale a pena?</h3>
+                    <p>Dados econômicos do setor agrícola mostram que **para cada 1 dólar investido em sementes geneticamente modificadas, o agricultor recebe em média um retorno de 3,69 dólares** em ganho de produtividade e economia de insumos.</p>
+                    <div class="roi-stats">
+                        <p>🔹 <strong>Economia Real Estimada nesta simulação:</strong> <span id="economia-pesticida" class="highlight">R$ 0,00</span> poupados em defensivos químicos e combustível.</p>
+                        <p>🔹 <strong>Ganho de Produtividade:</strong> Lavouras transgênicas produzem até <strong>15% mais</strong> na mesma quantidade de terra, evitando a necessidade de desmatar novas áreas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Cultivo Sustentável. Dados baseados em relatórios da ISAAA e PG Economics.</p>
+    </footer>
+
+    <div id="accessibility-modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal-btn">&times;</span>
+            <h3>Opções de Acessibilidade</h3>
+            <hr>
+            
+            <div class="control-group">
+                <p>Tamanho do Texto:</p>
+                <button id="font-decrease" class="btn-secondary">Diminuir A-</button>
+                <button id="font-increase" class="btn-secondary">Aumentar A+</button>
+            </div>
+
+            <div class="control-group">
+                <p>Acessibilidade de Áudio:</p>
+                <button id="audio-narration-btn" class="btn-primary">🔊 Ativar Narração da Página</button>
+                <p class="audio-instruction">Clique para ouvir o conteúdo ou parar a reprodução.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
